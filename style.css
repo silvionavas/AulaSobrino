@@ -1,3 +1,26 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #54585b;
+}
+
+a {
+    color: black;
+    font-weight: bolder;
+}
+
 p {
-    font-family: 'Courier New', Courier, monospace;
+    line-height: 25px;
+}
+
+img {
+    float: right;
+    margin: 0px 0px 5px 15px;
 }
