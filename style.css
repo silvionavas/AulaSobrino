@@ -28,7 +28,7 @@ h2 {
 
 a {
     color: black;
-    font-weight: bolder;
+
 }
 
 p {
@@ -90,4 +90,55 @@ table tr.linhasPrimarias{
 .destaqueDireita{
     float: right;
     margin: 0px 0px 5px 15px;
+}
+
+footer {
+    background-color: #bfd9a2;
+    padding: 20px 0;
+    text-align: center;
+    margin: 25px -100% -100% -100%;
+}
+
+.footer-content {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.footer-content strong {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.footer-content a {
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+.btn-voltar-topo {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+    display: inline-block;
+    background-color: #8bdb85;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-voltar-topo:hover {
+    background-color: #63be6a;
+}
+
+.btn-voltar-topo.transparente {
+    opacity: 0; 
 }
