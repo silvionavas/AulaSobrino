@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Banco de Dados</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Dados do Banco de Dados</h2>
+    <table id="dados">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Fazer uma requisição AJAX para obter os dados dos usuários
+        fetch('/usuarios')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('#dados tbody');
+                data.forEach(row => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${row.id}</td>
+                        <td>${row.nome}</td>
+                        <td>${row.email}</td>
+                        <td>${row.senha}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            })
+            .catch(error => console.error('Erro ao obter dados do banco de dados:', error));
+    </script>
+</body>
+</html>
