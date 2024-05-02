@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="form">
         <h2>Formulário FATEC Baixada Santista Rubens Lara</h2>
-        <form action="/signup" method="POST">
+        <!-- <form action="/signup" method="POST"> -->
+        <form action="/showData.html" method="GET">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -46,9 +49,10 @@
                     <fieldset>
                         <p>Deseja Receber Informações?</p>
                         <ul>
-                            <li><input type="radio" name="receber-informes" id="receber-informes-yes" value="yes" default>Sim</li>
-                            <li><input type="radio" name="receber-informes" id="receber-informes-no" value="no">Não</li>                         
-                        </ul>                       
+                            <li><input type="radio" name="receber-informes" id="receber-informes-yes" value="yes"
+                                    default>Sim</li>
+                            <li><input type="radio" name="receber-informes" id="receber-informes-no" value="no">Não</li>
+                        </ul>
                     </fieldset>
                 </div>
 
@@ -56,18 +60,22 @@
                     <label for="redes-sociais">Redes Sociais:</label>
                     <ul>
                         <p>Quais redes socias você usa?</p>
-                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-insta" value="insta" default>Instagram</li>
-                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-face" value="face" default>FaceBook</li>
-                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-x" value="x" default>X-Twitter</li>
-                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-linked" value="linked" default>Linkedin</li>
-                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-reddit" value="reddit" default>Reddit</li>
+                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-insta" value="insta"
+                                default>Instagram</li>
+                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-face" value="face"
+                                default>FaceBook</li>
+                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-x" value="x" default>X-Twitter
+                        </li>
+                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-linked" value="linked"
+                                default>Linkedin</li>
+                        <li><input type="checkbox" name="redes-sociais" id="redes-sociais-reddit" value="reddit"
+                                default>Reddit</li>
                     </ul>
                 </div>
             </div>
             <button type="submit">Enviar</button>
         </form>
     </div>
-
-    
 </body>
+
 </html>

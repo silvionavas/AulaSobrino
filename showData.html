@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Data</title>
+</head>
+
+<body>
+  <h1>Dados do Formulário</h1>
+
+  <div id="dados"></div>
+
+  <script>
+    // Função para obter parâmetros da URL
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Captura os parâmetros da URL
+    const nome = getParameterByName('nome');
+    const email = getParameterByName('email');
+    const senha = getParameterByName('senha');
+    const mensagem = getParameterByName('mensagem');
+    const cursos = getParameterByName('cursos');
+    const receberInformes = getParameterByName('receber-informes');
+    const redesSociais = getParameterByName('redes-sociais');
+
+    // Exibe os dados na div 'dados'
+    document.getElementById('dados').innerHTML = `
+            <p><strong>Nome:</strong> ${nome}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Senha:</strong> ${senha}</p>
+            <p><strong>Mensagem:</strong> ${mensagem}</p>
+            <p><strong>Cursos:</strong> ${cursos}</p>
+            <p><strong>Receber Informes:</strong> ${receberInformes}</p>
+            <p><strong>Redes Sociais:</strong> ${redesSociais}</p>
+        `;
+  </script>
+</body>
+
+</html>
