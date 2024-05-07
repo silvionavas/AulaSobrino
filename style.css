@@ -187,6 +187,7 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 1rem;
 }
 
 .form button:hover {
@@ -206,3 +207,14 @@ ul li{
     list-style-type: none;
 }
 
+.telefone {
+    background-color: red;
+}
+
+fieldset {
+    border-radius: 10%;
+}
+
+form div {
+    margin: 1rem;
+}

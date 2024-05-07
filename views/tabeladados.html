@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Show Data</title>
+</head>
+
+<body>
+    <h1>Dados do Formulário</h1>
+
+    <div id="dados">
+        <table>
+            <thead>
+                <tr>
+                    <th>Label</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nome</td>
+                    <td id="nome"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <td>Senha</td>
+                    <td id="senha"></td>
+                </tr>
+                <tr>
+                    <td>Mensagem</td>
+                    <td id="mensagem"></td>
+                </tr>
+                <tr>
+                    <td>Cursos</td>
+                    <td id="cursos"></td>
+                </tr>
+                <tr>
+                    <td>Receber Informes</td>
+                    <td id="receberInformes"></td>
+                </tr>
+                <tr>
+                    <td>Redes Sociais</td>
+                    <td id="redesSociais"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Função para obter parâmetros da URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Captura os parâmetros da URL
+        const nome = getParameterByName('nome');
+        const email = getParameterByName('email');
+        const senha = getParameterByName('senha');
+        const mensagem = getParameterByName('mensagem');
+        const cursos = getParameterByName('cursos');
+        const receberInformes = getParameterByName('receber-informes');
+        const redesSociais = getParameterByName('redes-sociais');
+
+        // Exibe os dados na tabela
+        document.getElementById('nome').textContent = nome;
+        document.getElementById('email').textContent = email;
+        document.getElementById('senha').textContent = senha;
+        document.getElementById('mensagem').textContent = mensagem;
+        document.getElementById('cursos').textContent = cursos;
+        document.getElementById('receberInformes').textContent = receberInformes;
+        document.getElementById('redesSociais').textContent = redesSociais;
+    </script>
+</body>
+
+</html>

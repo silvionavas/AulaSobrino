@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="form">
+        <h2>Formulário FATEC Baixada Santista Rubens Lara</h2>
+        <!-- <form action="/signup" method="POST"> -->
+        <form action="/views/showData.html" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="cursos">Cursos:</label>
+                <select name="cursos" id="cursos">
+                    <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+                    <option value="CD">Ciência de Dados</option>
+                    <option value="GE">Gestão Empresarial</option>
+                    <option value="GE--EAD">Gestão Empresarial(EaD)</option>
+                    <option value="GP">Gestão Portuaria</option>
+                    <option value="GRH">Gestão Recursos Humanos</option>
+                    <option value="LOG">Logística</option>
+                    <option value="LOG-AMS">Logística(AMS)</option>
+                    <option value="PG-AMS">Processos Gerenciais(AMS)</option>
+                    <option value="SI">Sistemas para Internet</option>
+                </select>
+
+                <div>
+                    <label for="preferencias">Autorizações</label>
+                    <fieldset>
+                        <legend>Deseja Receber Informações?</legend>
+                        <ul>
+                            <li><input type="radio" name="receber-informes" id="receber-informes-yes" value="yes"
+                                    default>Sim</li>
+                            <li><input type="radio" name="receber-informes" id="receber-informes-no" value="no">Não</li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="redes-sociais">Redes Sociais</label>
+                    <fieldset>
+                        <legend>Quais redes socias você usa?</legend>
+                        <ul>
+                            <li><input type="checkbox" name="redes-sociais" id="redes-sociais-insta" value="insta"
+                                    default>Instagram</li>
+                            <li><input type="checkbox" name="redes-sociais" id="redes-sociais-face" value="face"
+                                    default>FaceBook</li>
+                            <li><input type="checkbox" name="redes-sociais" id="redes-sociais-x" value="x" default>X-Twitter
+                            </li>
+                            <li><input type="checkbox" name="redes-sociais" id="redes-sociais-linked" value="linked"
+                                    default>Linkedin</li>
+                            <li><input type="checkbox" name="redes-sociais" id="redes-sociais-reddit" value="reddit"
+                                    default>Reddit</li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </div>
+
+            <h2>Outros Controles</h2>
+            <div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" size="13" maxlength="13">
+                </div>
+                <div>
+                    <label for="url">Site</label>
+                    <input type="url" name="site" id="site">
+                </div>
+                <div>
+                    <label for="nota">Qual nota daria para esse site?</label>
+                    <input type="number" name="nota" id="nota" mim="0" max="10" step="0.5">
+                </div>
+                <div>
+                    <label for="search">Pesquisar por</label>
+                    <input type="search" name="search" id="search">
+                </div>
+                <div>
+                    <label for="color">Escolha sua cor favorita:</label>
+                    <input type="color" name="color" id="color">
+                </div>
+                <div>
+                    <label for="range">Qual o seu grau de satisfação?</label>
+                    0<input type="range" name="range" id="range">100
+                </div>
+                <div>
+                    <label for="date">Data</label>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div>
+                    <label for="time">Hora</label>
+                    <input type="time" name="time" id="time">
+                </div>
+                <div>
+                    <label for="datetime-local">Dia/Mês/Ano</label>
+                    <input type="datetime-local" name="datetime-local" id="datetime-local">
+                </div>
+                <div>
+                    <label for="month">Mês</label>
+                    <input type="month" name="month" id="month">
+                </div>
+                <div>
+                    <label for="week">Semana</label>
+                    <input type="week" name="week" id="week">
+                </div>
+                <div>
+                    <label for="foto">Suta Foto</label>
+                    <input type="file" name="foto" id="foto">
+                    <!--Observar a nescessidade de analisar o enctype para o envio dos dados-->
+                </div>
+                
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

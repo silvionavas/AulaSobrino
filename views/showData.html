@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>Dados do Banco de Dados</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Dados Recebidos</h2>
+  <div id="dados">
+    <p><strong>Nome:</strong> <span id="nome"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Senha:</strong> <span id="senha"></span></p>
+    <p><strong>Mensagem:</strong> <span id="mensagem"></span></p>
+    <p><strong>Cursos:</strong> <span id="cursos"></span></p>
+    <p><strong>Receber Informes:</strong> <span id="receber-informes"></span></p>
+    <p><strong>Redes Sociais:</strong> <span id="redes-sociais"></span></p>
+  </div>
+
+  <script>
+    // Função para obter parâmetros da URL
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Captura os parâmetros da URL
+    const nome = getParameterByName('nome');
+    const email = getParameterByName('email');
+    const senha = getParameterByName('senha');
+    const mensagem = getParameterByName('mensagem');
+    const cursos = getParameterByName('cursos');
+    const receberInformes = getParameterByName('receber-informes');
+    const redesSociais = getParameterByName('redes-sociais');
+
+    // Exibe os dados na div 'dados'
+    document.getElementById('nome').textContent = nome;
+    document.getElementById('email').textContent = email;
+    document.getElementById('senha').textContent = senha;
+    document.getElementById('mensagem').textContent = mensagem;
+    document.getElementById('cursos').textContent = cursos;
+    document.getElementById('receber-informes').textContent = receberInformes;
+    document.getElementById('redes-sociais').textContent = redesSociais;
+  </script>
+</body>
+
+</html>
